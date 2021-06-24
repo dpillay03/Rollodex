@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 8080;
 
 // Connect Database
 connectDB();
+app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => {
   res.send("The API is working!");
